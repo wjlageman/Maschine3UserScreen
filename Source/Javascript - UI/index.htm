@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Maschine3Display - Feature demo</title>
+</head>
+<body>
+
+<screen id="screen"
+        type="maschine3"
+        template-name="dual-panel-test"
+        orientation="vertical"
+        background-color="black"
+        gap="1"
+        border="0"
+        border-color="blue">
+
+    <layouts>
+        <layout id="full-width" orientation="horizontal" widget-count="1"></layout>
+        <layout id="left-right" orientation="horizontal" widget-count="2"></layout>
+        <layout id="controls-8" orientation="horizontal" widget-count="8" gap="-1"></layout>
+        <layout id="vertical-4" orientation="vertical" widget-count="4" gap="-1"></layout>
+    </layouts>
+
+    <row id="header"
+            layout="full-width"
+            type="panel"
+            height="24">
+        <widget id="title"type="panel" text="Maschine MK 3 - User screen" font-size = 20 align="left"></widget>
+    </row>
+
+    <row id="split"
+            layout="left-right"
+            height="*">
+
+        <column id="left"
+                width="*"
+                gap="1"
+                border="1" border-top="2" border-left="3" border-right="4" border-bottom="5" border-color="red"
+                background-color="indigo">
+
+            <layouts>
+                <layout id="controls-4" orientation="horizontal" widget-count="4" gap="4"></layout>
+            </layouts>
+
+            <row id="labels"
+                    layout="controls-4"
+                    type="radio"
+                    height="22"
+                    background-color="blue|green"
+                    bold="1"
+                    gap="1">
+                <widget id="dial-1x" type="panel" text="Dial 1" control="dial-1"></widget>
+                <widget id="xdial-2x" type="panel" width="*.*" text="Dial 2" control="Dial 2"></widget>
+                <widget id="dial-3x" type="panel" width="*.*" text="Dial 3" control="Dial 3"></widget>
+                <widget id="dial4" type="panel" text="Dial 4"></widget>
+                <widget id="dial-5-to-8" type="panel" width="*.*" text="Dial 5-8"></widget>
+                <widget id="joystick" type="panel" width="*" text="Joystick"></widget>
+            </row>
+
+            <region id="dials"
+                    orientation="horizontal"
+                    layout="controls-4"
+                    type="dial"
+                    height="140"
+                    gap="1">
+                <widget id="dial-1" type="dial" background-color="orange" text="Volume" value="-6" max="6" min="-64" bold="1" italic="1" font-size="12" valign="center"></widget>
+                <widget id="dial-2" type="dial" background-color="white" text="Pan" width="*.*" value="0.71" min="-1.0" max="1.0" bipolar="1" font="Magneto" font-size="24" valign="center"></widget>
+                <widget id="dial-3" type="dial" background-color="blue" width="*.*" text="Atmo-~sphere" font="Algerian" font-size="16" value="0.71" min="0" max="1.0" valign="center"></widget>
+                <widget id="scroll-4" type="scroll" background-color="olive" width="*" value="2"  items="Kick|Snare|Hat|Clap|Tom|Ride|Crash|Perc|Bass|Lead|Pad|FX|Vox|Noise|Loop|Texture"></widget>
+                <column id="ADSR"
+                        orientation="vertical"
+                        layout="vertical-4"
+                        background-color="orange"
+                        width="*.*" 
+                        gap="2">
+                    <spacer height="10"></spacer>
+                    <widget id="dial-5" type="dial"  text="A" value="33" min="0" max="127" bold="1" font-size="12"></widget>
+                    <widget id="dial-6" type="dial"  text="D" value="60" min="0" max="127" bold="1" font-size="12"></widget>
+                    <widget id="dial-7" type="dial"  text="S" value="100" min="0" max="127" bold="1" font-size="12"></widget>
+                    <widget id="dial-8" type="dial"  text="R" value="25" min="0" max="127" bold="1" font-size="12"></widget>
+                    <spacer height="10"></spacer>
+                </column>
+                <widget id="joy-step" type="scroll" control="joy-step" background-color="gray" width="*" value="2" font-size="12" valign="center" 
+                    items="ape|antelope|armadillo|bear|civet|cat|deer|emu|elephant|fox|gerbil|goldfish|hippo|ibis|inchworm|jaguar|kangaroo|lizard|monkey|nightingale|okapi|ostrich|peacock|quail|rabbit|snake|tiger|unicorn|umbrella bird|vole|walrus|ox|butterfly|yak|zebra">
+                </widget>
+            </region>
+
+            <row id="buttons"
+                    gap="1"
+                    border="1"
+                    border-top="2"
+                    border-left="3" 
+                    border-right="8"
+                    border-bottom="5"
+                    border-color="white"
+                    background-color="blue">
+                <widget id="play" type="toggle" background-color="green|*" text="Play"></widget>
+                <widget id="rec" type="toggle" background-color="red|*" text="Rec"></widget>
+                <widget id="stop" type="bang" background-color="silver|*" text="Stop"></widget>
+                <widget id="select-1" type="radio" width="*.*" group="track-select" background-color="gray|*"></widget>
+                <widget id="select-2" type="radio" group="track-select" background-color="red|*"></widget>
+                <widget id="select-3" type="radio" width="*.*"group="track-select" background-color="indigo|*"></widget>
+                <widget id="select-4" type="radio" group="track-select" background-color="tomato|*"></widget>
+            </row>
+
+        </column>
+
+        <column id="right"
+                width="*"
+                gap="1"
+                background-color="black">
+
+            <layouts>
+                <layout id="controls-2" orientation="horizontal" widget-count="2" gap="4" border="1" border-color="#404040"></layout>
+                <layout id="controls-8-right" orientation="horizontal" widget-count="8" gap="4" border="1" border-color="#404040"></layout>
+            </layouts>
+
+            <region id="labels"
+                    orientation="horizontal"
+                    layout="controls-4"
+                    type="radio"
+                    height="44"
+                    background-color="blue"
+                    bold="1"
+                    border="1"
+                    gap="1">
+                <widget id="panel-0" type="panel" text="Top 1~button"></widget>
+                <widget id="panel-1" type="panel" text="Top 2~button"></widget>
+                <widget id="panel-2" type="panel" text="Top 3~button"></widget>
+                <widget id="panel-4" type="panel" text="Top 4~bang"></widget>
+                <widget id="panel-5" type="panel" text="Top 5~toggle"></widget>
+                <widget id="panel-6" type="panel" text="Top 6~< menu"></widget>
+                <widget id="panel-7" type="panel" text="Top 7~menu >"></widget>
+                <widget id="panel-8" type="panel" text="Top 8~menu"></widget>
+            </region>
+
+            <row id="buttons"
+                    layout="controls-8-right"
+                    type="button"
+                    height="48"
+                    background-color="gray"
+                    gap="1">
+                <widget id="button-1" type="button" text="Button 1" items="Off|On"></widget>
+                <widget id="button-2" type="button" text="Button 2" items="Off|Inhibit"></widget>
+                <widget id="button-3" type="button" text="Button 3" items="ADSR|On" background-color="tomato|*"></widget>
+                <widget id="button-4" type="bang" text="Button 4" background-color="dodgerblue"></widget>
+                <widget id="button-5" type="toggle" text="Button 5" items="Off|Active" color="red|green"></widget>
+                <widget id="button-7" type="menu" back="button-6" width="*.*" items="Zero|One|Two|Three|Four|Five" background-color="beige|blue|green|khaki|yellow|white"></widget>
+                <widget id="button-8" type="menu" text="Button 8"  items="Zero|One|Two|Three" background-color="khaki"></widget>
+            </row>
+
+            <!-- This is a comment -->
+            <spacer height="10" background-color="khaki"><!--Payload is comment only--></spacer>
+
+            <row id="extra-widgets"
+                    layout="controls-2"
+                    height="40"
+                    border-top="3" border-bottom="3" border-color="sun"
+                    gap="1">
+                <widget id="channel" type="bang" text="Channel" font="Andes" fontsize="24" bold="1"></widget>
+                <widget id="sampling" type="menu" border-top="1" border-bottom="1" text="Sampling" background-color="gray" items="Zero|One|Two|Three" background-color="blue"></widget> 
+            </row>
+
+            <row id="select-buttons"
+                    layout="controls-8-right"
+                    type="toggle"
+                    height="*"
+                    background-color="gray"
+                    border="1"
+                    gap="1">
+                <widget id="select-5" type="bang" text="Select 5" background-color="toy|*"></widget>
+                <widget id="select-6" type="button" text="Select 6" background-color="gold|*"></widget>
+                <widget id="select-7" type="menu" text="Sampling" background-color="indigo" items="Zero|One|Two|Three"></widget>
+                <widget id="select-8" type="toggle" text="Select 8" background-color="red|green"></widget>
+                <widget id="arrow-left" type="bang" width="*.*" text="<" font-size="96" background-color="toy" valign="center"></widget>
+                <widget id="arrow-right" type="bang" width="*.*" text=">" font-size="96" background-color="toy" valign="bottom"></widget>
+            </row>
+
+        </column>
+
+    </row>
+
+    <row id="status"
+            orientation="horizontal"
+            layout="full-width"
+            type="panel"
+            height="18">
+        <widget id="status-bar" type="panel" align="left"></widget>
+    </row>
+
+</screen>
+
+</body>
+</html>

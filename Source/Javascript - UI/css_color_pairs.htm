@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>CSS Toggle Pairs</title>
+    <link rel="stylesheet" href="base.css">
+
+    <script src="oscManager.js"></script>
+    <script src="oscMessage.js"></script>
+
+    <script src="MaschineColors.js"></script>
+    <script src="Box.js"></script>
+
+    <script src="WidgetUtilities.js"></script>
+    <script src="Label.js"></script>
+    <script src="Widget.js"></script>
+    <script src="WidgetState.js"></script>
+    <script src="PanelWidget.js"></script>
+    <script src="MidiWidget.js"></script>
+    <script src="BangWidget.js"></script>
+    <script src="ButtonWidget.js"></script>
+    <script src="ToggleWidget.js"></script>
+    <script src="MenuWidget.js"></script>
+    <script src="ScrollWidget.js"></script>
+    <script src="RadioButtonWidget.js"></script>
+    <script src="DialWidget.js"></script>
+    <script src="WidgetObjects.js"></script>
+
+    <script src="Utilities.js"></script>
+    <script src="JsonFormatter.js"></script>
+
+    <script src="ScreenCompiler.js"></script>
+    <script src="ScreenLayout.js"></script>
+    <script src="Region.js"></script>
+    <script src="Screen.js"></script>
+    <script src="ScreenManager.js"></script>
+
+    <script src="ControlsManager.js"></script>
+    <script src="main.js"></script>
+</head>
+<body>
+
+<screen id="screen"
+        type="maschine3"
+        template-name="css-toggle-pairs"
+        orientation="horizontal"
+        background-color="black"
+        gap="8"
+        border="1"
+        border-color="gray">
+
+    <layouts>
+        <layout id="pair-layout"
+                orientation="horizontal"
+                widget-count="2"
+                gap="2">
+        </layout>
+    </layouts>
+
+    <region id="left-screen"
+            orientation="vertical"
+            width="*"
+            gap="2"
+            background-color="black">
+
+        <region orientation="horizontal"
+                layout="pair-layout"
+                type="panel"
+                height="18">
+            <widget id="title-left"
+                    type="panel"
+                    text="Toggle pairs"
+                    background-color="body"
+                    text-color="chalk"
+                    font-size="11">
+            </widget>
+
+            <widget id="title-right"
+                    type="panel"
+                    text="dark | light"
+                    background-color="body"
+                    text-color="chalk"
+                    font-size="11">
+            </widget>
+        </region>
+
+
+        <region orientation="horizontal"
+                layout="pair-layout"
+                type="panel"
+                height="20"
+                gap="2">
+            <widget id="darkred" type="toggle" text="darkred" background-color="darkred|indianred" font-size="10"></widget>
+            <widget id="indianred" type="toggle" text="indianred" background-color="darkred|indianred" value="1" font-size="10"></widget>
+        </region>
+
+        <region orientation="horizontal"
+                layout="pair-layout"
+                type="panel"
+                height="20"
+                gap="2">
+            <widget id="firebrick" type="toggle" text="firebrick" background-color="firebrick|lightcoral" font-size="10"></widget>
+            <widget id="lightcoral" type="toggle" text="lightcoral" background-color="firebrick|lightcoral" value="1" font-size="10"></widget>
+        </region>
+
+        <region orientation="horizontal"
+                layout="pair-layout"
+                type="panel"
+                height="20"
+                gap="2">
+            <widget id="orangered" type="toggle" text="orangered" background-color="orangered|lightsalmon" font-size="10"></widget>
+            <widget id="lightsalmon" type="toggle" text="lightsalmon" background-color="orangered|lightsalmon" value="1" font-size="10"></widget>
+        </region>
+
+        <region orientation="horizontal"
+                layout="pair-layout"
+                type="panel"
+                height="20"
+                gap="2">
+            <widget id="saddlebrown" type="toggle" text="saddlebrown" background-color="saddlebrown|sandybrown" font-size="10"></widget>
+            <widget id="sandybrown" type="toggle" text="sandybrown" background-color="saddlebrown|sandybrown" value="1" font-size="10"></widget>
+        </region>
+
+        <region orientation="horizontal"
+                layout="pair-layout"
+                type="panel"
+                height="20"
+                gap="2">
+            <widget id="chocolate" type="toggle" text="chocolate" background-color="chocolate|burlywood" font-size="10"></widget>
+            <widget id="burlywood" type="toggle" text="burlywood" background-color="chocolate|burlywood" value="1" font-size="10"></widget>
+        </region>
+
+        <region orientation="horizontal"
+                layout="pair-layout"
+                type="panel"
+                height="20"
+                gap="2">
+            <widget id="darkgoldenrod" type="toggle" text="darkgoldenrod" background-color="darkgoldenrod|goldenrod" font-size="10"></widget>
+            <widget id="goldenrod" type="toggle" text="goldenrod" background-color="darkgoldenrod|goldenrod" value="1" font-size="10"></widget>
+        </region>
+
+        <region orientation="horizontal"
+                layout="pair-layout"
+                type="panel"
+                height="20"
+                gap="2">
+            <widget id="olive" type="toggle" text="olive" background-color="olive|darkkhaki" font-size="10"></widget>
+            <widget id="darkkhaki" type="toggle" text="darkkhaki" background-color="olive|darkkhaki" value="1" font-size="10"></widget>
+        </region>
+
+        <region orientation="horizontal"
+                layout="pair-layout"
+                type="panel"
+                height="20"
+                gap="2">
+            <widget id="olivedrab" type="toggle" text="olivedrab" background-color="olivedrab|yellowgreen" font-size="10"></widget>
+            <widget id="yellowgreen" type="toggle" text="yellowgreen" background-color="olivedrab|yellowgreen" value="1" font-size="10"></widget>
+        </region>
+
+        <region orientation="horizontal"
+                layout="pair-layout"
+                type="panel"
+                height="20"
+                gap="2">
+            <widget id="darkgreen" type="toggle" text="darkgreen" background-color="darkgreen|mediumseagreen" font-size="10"></widget>
+            <widget id="mediumseagreen" type="toggle" text="mediumseagreen" background-color="darkgreen|mediumseagreen" value="1" font-size="10"></widget>
+        </region>
+
+        <region orientation="horizontal"
+                layout="pair-layout"
+                type="panel"
+                height="20"
+                gap="2">
+            <widget id="seagreen" type="toggle" text="seagreen" background-color="seagreen|palegreen" font-size="10"></widget>
+            <widget id="palegreen" type="toggle" text="palegreen" background-color="seagreen|palegreen" value="1" font-size="10"></widget>
+        </region>
+
+        <region orientation="horizontal"
+                layout="pair-layout"
+                type="panel"
+                height="20"
+                gap="2">
+            <widget id="darkcyan" type="toggle" text="darkcyan" background-color="darkcyan|mediumturquoise" font-size="10"></widget>
+            <widget id="mediumturquoise" type="toggle" text="mediumturquoise" background-color="darkcyan|mediumturquoise" value="1" font-size="10"></widget>
+        </region>
+
+        <region orientation="horizontal"
+                layout="pair-layout"
+                type="panel"
+                height="20"
+                gap="2">
+            <widget id="cadetblue" type="toggle" text="cadetblue" background-color="cadetblue|paleturquoise" font-size="10"></widget>
+            <widget id="paleturquoise" type="toggle" text="paleturquoise" background-color="cadetblue|paleturquoise" value="1" font-size="10"></widget>
+        </region>
+
+
+    </region>
+
+    <region id="right-screen"
+            orientation="vertical"
+            width="*"
+            gap="2"
+            background-color="black">
+
+
+        <region orientation="horizontal"
+                layout="pair-layout"
+                type="panel"
+                height="20"
+                gap="2">
+            <widget id="teal" type="toggle" text="teal" background-color="teal|aquamarine" font-size="10"></widget>
+            <widget id="aquamarine" type="toggle" text="aquamarine" background-color="teal|aquamarine" value="1" font-size="10"></widget>
+        </region>
+
+        <region orientation="horizontal"
+                layout="pair-layout"
+                type="panel"
+                height="20"
+                gap="2">
+            <widget id="darkslateblue" type="toggle" text="darkslateblue" background-color="darkslateblue|mediumpurple" font-size="10"></widget>
+            <widget id="mediumpurple" type="toggle" text="mediumpurple" background-color="darkslateblue|mediumpurple" value="1" font-size="10"></widget>
+        </region>
+
+        <region orientation="horizontal"
+                layout="pair-layout"
+                type="panel"
+                height="20"
+                gap="2">
+            <widget id="navy" type="toggle" text="navy" background-color="navy|cornflowerblue" font-size="10"></widget>
+            <widget id="cornflowerblue" type="toggle" text="cornflowerblue" background-color="navy|cornflowerblue" value="1" font-size="10"></widget>
+        </region>
+
+        <region orientation="horizontal"
+                layout="pair-layout"
+                type="panel"
+                height="20"
+                gap="2">
+            <widget id="mediumblue" type="toggle" text="mediumblue" background-color="mediumblue|deepskyblue" font-size="10"></widget>
+            <widget id="deepskyblue" type="toggle" text="deepskyblue" background-color="mediumblue|deepskyblue" value="1" font-size="10"></widget>
+        </region>
+
+        <region orientation="horizontal"
+                layout="pair-layout"
+                type="panel"
+                height="20"
+                gap="2">
+            <widget id="royalblue" type="toggle" text="royalblue" background-color="royalblue|lightskyblue" font-size="10"></widget>
+            <widget id="lightskyblue" type="toggle" text="lightskyblue" background-color="royalblue|lightskyblue" value="1" font-size="10"></widget>
+        </region>
+
+        <region orientation="horizontal"
+                layout="pair-layout"
+                type="panel"
+                height="20"
+                gap="2">
+            <widget id="rebeccapurple" type="toggle" text="rebeccapurple" background-color="rebeccapurple|mediumorchid" font-size="10"></widget>
+            <widget id="mediumorchid" type="toggle" text="mediumorchid" background-color="rebeccapurple|mediumorchid" value="1" font-size="10"></widget>
+        </region>
+
+        <region orientation="horizontal"
+                layout="pair-layout"
+                type="panel"
+                height="20"
+                gap="2">
+            <widget id="darkorchid" type="toggle" text="darkorchid" background-color="darkorchid|plum" font-size="10"></widget>
+            <widget id="plum" type="toggle" text="plum" background-color="darkorchid|plum" value="1" font-size="10"></widget>
+        </region>
+
+        <region orientation="horizontal"
+                layout="pair-layout"
+                type="panel"
+                height="20"
+                gap="2">
+            <widget id="darkmagenta" type="toggle" text="darkmagenta" background-color="darkmagenta|violet" font-size="10"></widget>
+            <widget id="violet" type="toggle" text="violet" background-color="darkmagenta|violet" value="1" font-size="10"></widget>
+        </region>
+
+        <region orientation="horizontal"
+                layout="pair-layout"
+                type="panel"
+                height="20"
+                gap="2">
+            <widget id="mediumvioletred" type="toggle" text="mediumvioletred" background-color="mediumvioletred|lightpink" font-size="10"></widget>
+            <widget id="lightpink" type="toggle" text="lightpink" background-color="mediumvioletred|lightpink" value="1" font-size="10"></widget>
+        </region>
+
+        <region orientation="horizontal"
+                layout="pair-layout"
+                type="panel"
+                height="20"
+                gap="2">
+            <widget id="crimson" type="toggle" text="crimson" background-color="crimson|palevioletred" font-size="10"></widget>
+            <widget id="palevioletred" type="toggle" text="palevioletred" background-color="crimson|palevioletred" value="1" font-size="10"></widget>
+        </region>
+
+        <region orientation="horizontal"
+                layout="pair-layout"
+                type="panel"
+                height="20"
+                gap="2">
+            <widget id="dimgray" type="toggle" text="dimgray" background-color="dimgray|lightgrey" font-size="10"></widget>
+            <widget id="lightgrey" type="toggle" text="lightgrey" background-color="dimgray|lightgrey" value="1" font-size="10"></widget>
+        </region>
+
+        <region orientation="horizontal"
+                layout="pair-layout"
+                type="panel"
+                height="20"
+                gap="2">
+            <widget id="darkgray" type="toggle" text="darkgray" background-color="darkgray|gainsboro" font-size="10"></widget>
+            <widget id="gainsboro" type="toggle" text="gainsboro" background-color="darkgray|gainsboro" value="1" font-size="10"></widget>
+        </region>
+
+
+    </region>
+
+</screen>
+
+</body>
+</html>

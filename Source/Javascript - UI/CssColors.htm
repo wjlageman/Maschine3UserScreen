@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Maschine3Display - Index</title>
+    <link rel="stylesheet" href="base.css">
+
+    <script src="oscManager.js"></script>
+    <script src="oscMessage.js"></script>
+
+    <script src="MaschineColors.js"></script>
+    <script src="Box.js"></script>
+
+    <script src="WidgetUtilities.js"></script>
+    <script src="Label.js"></script>
+    <script src="Widget.js"></script>
+    <script src="WidgetState.js"></script>
+    <script src="PanelWidget.js"></script>
+    <script src="MidiWidget.js"></script>
+    <script src="BangWidget.js"></script>
+    <script src="ButtonWidget.js"></script>
+    <script src="ToggleWidget.js"></script>
+    <script src="MenuWidget.js"></script>
+    <script src="ScrollWidget.js"></script>
+    <script src="RadioButtonWidget.js"></script>
+    <script src="DialWidget.js"></script>
+    <script src="WidgetObjects.js"></script>
+
+    <script src="Utilities.js"></script>
+    <script src="JsonFormatter.js"></script>
+
+    <script src="ScreenCompiler.js"></script>
+    <script src="ScreenLayout.js"></script>
+    <script src="Region.js"></script>
+    <script src="Screen.js"></script>
+    <script src="ScreenManager.js"></script>
+
+    <script src="ControlsManager.js"></script>
+    <script src="main.js"></script>
+</head>
+<body>
+
+<screen id="screen"
+        type="maschine3"
+        template-name="css-colors-by-hue"
+        orientation="horizontal"
+        background-color="black"
+        gap="8"
+        border="1"
+        border-color="gray">
+
+    <layouts>
+        <layout id="left-right" orientation="horizontal" widget-count="2"></layout>
+        <layout id="colors-5" orientation="horizontal" widget-count="5" gap="1"></layout>
+    </layouts>
+
+    <region id="screens"
+            orientation="horizontal"
+            layout="left-right"
+            height="*"
+            gap="8"
+            background-color="black">
+
+        <region id="left-screen"
+                orientation="vertical"
+                width="*"
+                gap="1"
+                background-color="black">
+
+            <region id="left-header"
+                    orientation="horizontal"
+                    layout="colors-5"
+                    type="panel"
+                    height="16"
+                    background-color="body">
+                <widget id="left-title" type="panel" text="CSS by hue 1-65" background-color="body" text-color="chalk" bold="1" font-size="10"></widget>
+                <widget id="left-spacer-1" type="panel" text="" background-color="body"></widget>
+                <widget id="left-spacer-2" type="panel" text="" background-color="body"></widget>
+                <widget id="left-spacer-3" type="panel" text="" background-color="body"></widget>
+                <widget id="left-spacer-4" type="panel" text="" background-color="body"></widget>
+            </region>
+
+            <region id="left-row-1"
+                    orientation="horizontal"
+                    layout="colors-5"
+                    type="panel"
+                    height="*"
+                    gap="1">
+                <widget id="left-maroon" type="panel" text="maroon" background-color="maroon" font-size="10"></widget>
+                <widget id="left-darkred" type="panel" text="darkred" background-color="darkred" font-size="10"></widget>
+                <widget id="left-firebrick" type="panel" text="firebrick" background-color="firebrick" font-size="10"></widget>
+                <widget id="left-indianred" type="panel" text="indianred" background-color="indianred" font-size="10"></widget>
+                <widget id="left-rosybrown" type="panel" text="rosybrown" background-color="rosybrown" font-size="10"></widget>
+            </region>
+            <region id="left-row-2"
+                    orientation="horizontal"
+                    layout="colors-5"
+                    type="panel"
+                    height="*"
+                    gap="1">
+                <widget id="left-lightcoral" type="panel" text="lightcoral" background-color="lightcoral" font-size="10"></widget>
+                <widget id="left-snow" type="panel" text="snow" background-color="snow" font-size="10"></widget>
+                <widget id="left-mistyrose" type="panel" text="mistyrose" background-color="mistyrose" font-size="10"></widget>
+                <widget id="left-salmon" type="panel" text="salmon" background-color="salmon" font-size="10"></widget>
+                <widget id="left-darksalmon" type="panel" text="darksalmon" background-color="darksalmon" font-size="10"></widget>
+            </region>
+            <region id="left-row-3"
+                    orientation="horizontal"
+                    layout="colors-5"
+                    type="panel"
+                    height="*"
+                    gap="1">
+                <widget id="left-orangered" type="panel" text="orangered" background-color="orangered" font-size="10"></widget>
+                <widget id="left-lightsalmon" type="panel" text="lightsalmon" background-color="lightsalmon" font-size="10"></widget>
+                <widget id="left-sienna" type="panel" text="sienna" background-color="sienna" font-size="10"></widget>
+                <widget id="left-seashell" type="panel" text="seashell" background-color="seashell" font-size="10"></widget>
+                <widget id="left-saddlebrown" type="panel" text="saddlebrown" background-color="saddlebrown" font-size="10"></widget>
+            </region>
+            <region id="left-row-4"
+                    orientation="horizontal"
+                    layout="colors-5"
+                    type="panel"
+                    height="*"
+                    gap="1">
+                <widget id="left-chocolate" type="panel" text="chocolate" background-color="chocolate" font-size="10"></widget>
+                <widget id="left-sandybrown" type="panel" text="sandybrown" background-color="sandybrown" font-size="10"></widget>
+                <widget id="left-peachpuff" type="panel" text="peachpuff" background-color="peachpuff" font-size="10"></widget>
+                <widget id="left-peru" type="panel" text="peru" background-color="peru" font-size="10"></widget>
+                <widget id="left-linen" type="panel" text="linen" background-color="linen" font-size="10"></widget>
+            </region>
+            <region id="left-row-5"
+                    orientation="horizontal"
+                    layout="colors-5"
+                    type="panel"
+                    height="*"
+                    gap="1">
+                <widget id="left-bisque" type="panel" text="bisque" background-color="bisque" font-size="10"></widget>
+                <widget id="left-darkorange" type="panel" text="darkorange" background-color="darkorange" font-size="10"></widget>
+                <widget id="left-burlywood" type="panel" text="burlywood" background-color="burlywood" font-size="10"></widget>
+                <widget id="left-antiquewhite" type="panel" text="antiquewhite" background-color="antiquewhite" font-size="10"></widget>
+                <widget id="left-tan" type="panel" text="tan" background-color="tan" font-size="10"></widget>
+            </region>
+            <region id="left-row-6"
+                    orientation="horizontal"
+                    layout="colors-5"
+                    type="panel"
+                    height="*"
+                    gap="1">
+                <widget id="left-navajowhite" type="panel" text="navajowhite" background-color="navajowhite" font-size="10"></widget>
+                <widget id="left-blanchedalmond" type="panel" text="blanchedalmond" background-color="blanchedalmond" font-size="10"></widget>
+                <widget id="left-papayawhip" type="panel" text="papayawhip" background-color="papayawhip" font-size="10"></widget>
+                <widget id="left-moccasin" type="panel" text="moccasin" background-color="moccasin" font-size="10"></widget>
+                <widget id="left-oldlace" type="panel" text="oldlace" background-color="oldlace" font-size="10"></widget>
+            </region>
+            <region id="left-row-7"
+                    orientation="horizontal"
+                    layout="colors-5"
+                    type="panel"
+                    height="*"
+                    gap="1">
+                <widget id="left-floralwhite" type="panel" text="floralwhite" background-color="floralwhite" font-size="10"></widget>
+                <widget id="left-darkgoldenrod" type="panel" text="darkgoldenrod" background-color="darkgoldenrod" font-size="10"></widget>
+                <widget id="left-goldenrod" type="panel" text="goldenrod" background-color="goldenrod" font-size="10"></widget>
+                <widget id="left-cornsilk" type="panel" text="cornsilk" background-color="cornsilk" font-size="10"></widget>
+                <widget id="left-lemonchiffon" type="panel" text="lemonchiffon" background-color="lemonchiffon" font-size="10"></widget>
+            </region>
+            <region id="left-row-8"
+                    orientation="horizontal"
+                    layout="colors-5"
+                    type="panel"
+                    height="*"
+                    gap="1">
+                <widget id="left-palegoldenrod" type="panel" text="palegoldenrod" background-color="palegoldenrod" font-size="10"></widget>
+                <widget id="left-darkkhaki" type="panel" text="darkkhaki" background-color="darkkhaki" font-size="10"></widget>
+                <widget id="left-olive" type="panel" text="olive" background-color="olive" font-size="10"></widget>
+                <widget id="left-lightgoldenrodyellow" type="panel" text="lightgoldenrodyellow" background-color="lightgoldenrodyellow" font-size="10"></widget>
+                <widget id="left-beige" type="panel" text="beige" background-color="beige" font-size="10"></widget>
+            </region>
+            <region id="left-row-9"
+                    orientation="horizontal"
+                    layout="colors-5"
+                    type="panel"
+                    height="*"
+                    gap="1">
+                <widget id="left-lightyellow" type="panel" text="lightyellow" background-color="lightyellow" font-size="10"></widget>
+                <widget id="left-ivory" type="panel" text="ivory" background-color="ivory" font-size="10"></widget>
+                <widget id="left-olivedrab" type="panel" text="olivedrab" background-color="olivedrab" font-size="10"></widget>
+                <widget id="left-yellowgreen" type="panel" text="yellowgreen" background-color="yellowgreen" font-size="10"></widget>
+                <widget id="left-darkolivegreen" type="panel" text="darkolivegreen" background-color="darkolivegreen" font-size="10"></widget>
+            </region>
+            <region id="left-row-10"
+                    orientation="horizontal"
+                    layout="colors-5"
+                    type="panel"
+                    height="*"
+                    gap="1">
+                <widget id="left-greenyellow" type="panel" text="greenyellow" background-color="greenyellow" font-size="10"></widget>
+                <widget id="left-chartreuse" type="panel" text="chartreuse" background-color="chartreuse" font-size="10"></widget>
+                <widget id="left-lawngreen" type="panel" text="lawngreen" background-color="lawngreen" font-size="10"></widget>
+                <widget id="left-darkgreen" type="panel" text="darkgreen" background-color="darkgreen" font-size="10"></widget>
+                <widget id="left-darkseagreen" type="panel" text="darkseagreen" background-color="darkseagreen" font-size="10"></widget>
+            </region>
+            <region id="left-row-11"
+                    orientation="horizontal"
+                    layout="colors-5"
+                    type="panel"
+                    height="*"
+                    gap="1">
+                <widget id="left-lightgreen" type="panel" text="lightgreen" background-color="lightgreen" font-size="10"></widget>
+                <widget id="left-palegreen" type="panel" text="palegreen" background-color="palegreen" font-size="10"></widget>
+                <widget id="left-honeydew" type="panel" text="honeydew" background-color="honeydew" font-size="10"></widget>
+                <widget id="left-seagreen" type="panel" text="seagreen" background-color="seagreen" font-size="10"></widget>
+                <widget id="left-mediumseagreen" type="panel" text="mediumseagreen" background-color="mediumseagreen" font-size="10"></widget>
+            </region>
+            <region id="left-row-12"
+                    orientation="horizontal"
+                    layout="colors-5"
+                    type="panel"
+                    height="*"
+                    gap="1">
+                <widget id="left-springgreen" type="panel" text="springgreen" background-color="springgreen" font-size="10"></widget>
+                <widget id="left-mintcream" type="panel" text="mintcream" background-color="mintcream" font-size="10"></widget>
+                <widget id="left-mediumspringgreen" type="panel" text="mediumspringgreen" background-color="mediumspringgreen" font-size="10"></widget>
+                <widget id="left-mediumaquamarine" type="panel" text="mediumaquamarine" background-color="mediumaquamarine" font-size="10"></widget>
+                <widget id="left-aquamarine" type="panel" text="aquamarine" background-color="aquamarine" font-size="10"></widget>
+            </region>
+            <region id="left-row-13"
+                    orientation="horizontal"
+                    layout="colors-5"
+                    type="panel"
+                    height="*"
+                    gap="1">
+                <widget id="left-lightseagreen" type="panel" text="lightseagreen" background-color="lightseagreen" font-size="10"></widget>
+                <widget id="left-mediumturquoise" type="panel" text="mediumturquoise" background-color="mediumturquoise" font-size="10"></widget>
+                <widget id="left-darkslategray" type="panel" text="darkslategray" background-color="darkslategray" font-size="10"></widget>
+                <widget id="left-darkslategrey" type="panel" text="darkslategrey" background-color="darkslategrey" font-size="10"></widget>
+                <widget id="left-darkcyan" type="panel" text="darkcyan" background-color="darkcyan" font-size="10"></widget>
+            </region>
+
+        </region>
+
+        <region id="right-screen"
+                orientation="vertical"
+                width="*"
+                gap="1"
+                background-color="black">
+
+            <region id="right-header"
+                    orientation="horizontal"
+                    layout="colors-5"
+                    type="panel"
+                    height="16"
+                    background-color="body">
+                <widget id="right-title" type="panel" text="CSS by hue 66-121" background-color="body" text-color="chalk" bold="1" font-size="10"></widget>
+                <widget id="right-spacer-1" type="panel" text="" background-color="body"></widget>
+                <widget id="right-spacer-2" type="panel" text="" background-color="body"></widget>
+                <widget id="right-spacer-3" type="panel" text="" background-color="body"></widget>
+                <widget id="right-spacer-4" type="panel" text="" background-color="body"></widget>
+            </region>
+
+            <region id="right-row-1"
+                    orientation="horizontal"
+                    layout="colors-5"
+                    type="panel"
+                    height="*"
+                    gap="1">
+                <widget id="right-aqua" type="panel" text="aqua" background-color="aqua" font-size="10"></widget>
+                <widget id="right-paleturquoise" type="panel" text="paleturquoise" background-color="paleturquoise" font-size="10"></widget>
+                <widget id="right-lightcyan" type="panel" text="lightcyan" background-color="lightcyan" font-size="10"></widget>
+                <widget id="right-azure" type="panel" text="azure" background-color="azure" font-size="10"></widget>
+                <widget id="right-darkturquoise" type="panel" text="darkturquoise" background-color="darkturquoise" font-size="10"></widget>
+            </region>
+            <region id="right-row-2"
+                    orientation="horizontal"
+                    layout="colors-5"
+                    type="panel"
+                    height="*"
+                    gap="1">
+                <widget id="right-cadetblue" type="panel" text="cadetblue" background-color="cadetblue" font-size="10"></widget>
+                <widget id="right-powderblue" type="panel" text="powderblue" background-color="powderblue" font-size="10"></widget>
+                <widget id="right-lightblue" type="panel" text="lightblue" background-color="lightblue" font-size="10"></widget>
+                <widget id="right-deepskyblue" type="panel" text="deepskyblue" background-color="deepskyblue" font-size="10"></widget>
+                <widget id="right-skyblue" type="panel" text="skyblue" background-color="skyblue" font-size="10"></widget>
+            </region>
+            <region id="right-row-3"
+                    orientation="horizontal"
+                    layout="colors-5"
+                    type="panel"
+                    height="*"
+                    gap="1">
+                <widget id="right-lightskyblue" type="panel" text="lightskyblue" background-color="lightskyblue" font-size="10"></widget>
+                <widget id="right-steelblue" type="panel" text="steelblue" background-color="steelblue" font-size="10"></widget>
+                <widget id="right-aliceblue" type="panel" text="aliceblue" background-color="aliceblue" font-size="10"></widget>
+                <widget id="right-dodgerblue" type="panel" text="dodgerblue" background-color="dodgerblue" font-size="10"></widget>
+                <widget id="right-slategray" type="panel" text="slategray" background-color="slategray" font-size="10"></widget>
+            </region>
+            <region id="right-row-4"
+                    orientation="horizontal"
+                    layout="colors-5"
+                    type="panel"
+                    height="*"
+                    gap="1">
+                <widget id="right-slategrey" type="panel" text="slategrey" background-color="slategrey" font-size="10"></widget>
+                <widget id="right-lightslategray" type="panel" text="lightslategray" background-color="lightslategray" font-size="10"></widget>
+                <widget id="right-lightslategrey" type="panel" text="lightslategrey" background-color="lightslategrey" font-size="10"></widget>
+                <widget id="right-lightsteelblue" type="panel" text="lightsteelblue" background-color="lightsteelblue" font-size="10"></widget>
+                <widget id="right-cornflowerblue" type="panel" text="cornflowerblue" background-color="cornflowerblue" font-size="10"></widget>
+            </region>
+            <region id="right-row-5"
+                    orientation="horizontal"
+                    layout="colors-5"
+                    type="panel"
+                    height="*"
+                    gap="1">
+                <widget id="right-royalblue" type="panel" text="royalblue" background-color="royalblue" font-size="10"></widget>
+                <widget id="right-navy" type="panel" text="navy" background-color="navy" font-size="10"></widget>
+                <widget id="right-midnightblue" type="panel" text="midnightblue" background-color="midnightblue" font-size="10"></widget>
+                <widget id="right-darkblue" type="panel" text="darkblue" background-color="darkblue" font-size="10"></widget>
+                <widget id="right-mediumblue" type="panel" text="mediumblue" background-color="mediumblue" font-size="10"></widget>
+            </region>
+            <region id="right-row-6"
+                    orientation="horizontal"
+                    layout="colors-5"
+                    type="panel"
+                    height="*"
+                    gap="1">
+                <widget id="right-lavender" type="panel" text="lavender" background-color="lavender" font-size="10"></widget>
+                <widget id="right-ghostwhite" type="panel" text="ghostwhite" background-color="ghostwhite" font-size="10"></widget>
+                <widget id="right-slateblue" type="panel" text="slateblue" background-color="slateblue" font-size="10"></widget>
+                <widget id="right-darkslateblue" type="panel" text="darkslateblue" background-color="darkslateblue" font-size="10"></widget>
+                <widget id="right-mediumslateblue" type="panel" text="mediumslateblue" background-color="mediumslateblue" font-size="10"></widget>
+            </region>
+            <region id="right-row-7"
+                    orientation="horizontal"
+                    layout="colors-5"
+                    type="panel"
+                    height="*"
+                    gap="1">
+                <widget id="right-mediumpurple" type="panel" text="mediumpurple" background-color="mediumpurple" font-size="10"></widget>
+                <widget id="right-rebeccapurple" type="panel" text="rebeccapurple" background-color="rebeccapurple" font-size="10"></widget>
+                <widget id="right-blueviolet" type="panel" text="blueviolet" background-color="blueviolet" font-size="10"></widget>
+                <widget id="right-darkorchid" type="panel" text="darkorchid" background-color="darkorchid" font-size="10"></widget>
+                <widget id="right-darkviolet" type="panel" text="darkviolet" background-color="darkviolet" font-size="10"></widget>
+            </region>
+            <region id="right-row-8"
+                    orientation="horizontal"
+                    layout="colors-5"
+                    type="panel"
+                    height="*"
+                    gap="1">
+                <widget id="right-mediumorchid" type="panel" text="mediumorchid" background-color="mediumorchid" font-size="10"></widget>
+                <widget id="right-darkmagenta" type="panel" text="darkmagenta" background-color="darkmagenta" font-size="10"></widget>
+                <widget id="right-fuchsia" type="panel" text="fuchsia" background-color="fuchsia" font-size="10"></widget>
+                <widget id="right-magenta" type="panel" text="magenta" background-color="magenta" font-size="10"></widget>
+                <widget id="right-plum" type="panel" text="plum" background-color="plum" font-size="10"></widget>
+            </region>
+            <region id="right-row-9"
+                    orientation="horizontal"
+                    layout="colors-5"
+                    type="panel"
+                    height="*"
+                    gap="1">
+                <widget id="right-thistle" type="panel" text="thistle" background-color="thistle" font-size="10"></widget>
+                <widget id="right-mediumvioletred" type="panel" text="mediumvioletred" background-color="mediumvioletred" font-size="10"></widget>
+                <widget id="right-deeppink" type="panel" text="deeppink" background-color="deeppink" font-size="10"></widget>
+                <widget id="right-lavenderblush" type="panel" text="lavenderblush" background-color="lavenderblush" font-size="10"></widget>
+                <widget id="right-palevioletred" type="panel" text="palevioletred" background-color="palevioletred" font-size="10"></widget>
+            </region>
+            <region id="right-row-10"
+                    orientation="horizontal"
+                    layout="colors-5"
+                    type="panel"
+                    height="*"
+                    gap="1">
+                <widget id="right-crimson" type="panel" text="crimson" background-color="crimson" font-size="10"></widget>
+                <widget id="right-lightpink" type="panel" text="lightpink" background-color="lightpink" font-size="10"></widget>
+                <widget id="right-dimgray" type="panel" text="dimgray" background-color="dimgray" font-size="10"></widget>
+                <widget id="right-dimgrey" type="panel" text="dimgrey" background-color="dimgrey" font-size="10"></widget>
+                <widget id="right-grey" type="panel" text="grey" background-color="grey" font-size="10"></widget>
+            </region>
+            <region id="right-row-11"
+                    orientation="horizontal"
+                    layout="colors-5"
+                    type="panel"
+                    height="*"
+                    gap="1">
+                <widget id="right-darkgray" type="panel" text="darkgray" background-color="darkgray" font-size="10"></widget>
+                <widget id="right-darkgrey" type="panel" text="darkgrey" background-color="darkgrey" font-size="10"></widget>
+                <widget id="right-lightgrey" type="panel" text="lightgrey" background-color="lightgrey" font-size="10"></widget>
+                <widget id="right-gainsboro" type="panel" text="gainsboro" background-color="gainsboro" font-size="10"></widget>
+                <widget id="right-wheat" type="panel" text="wheat" background-color="wheat" font-size="10"></widget>
+            </region>
+            <region id="right-row-12"
+                    orientation="horizontal"
+                    layout="colors-5"
+                    type="panel"
+                    height="*"
+                    gap="1">
+                <widget id="right-whitesmoke" type="panel" text="whitesmoke" background-color="whitesmoke" font-size="10"></widget>
+                <widget id="right-empty-11-1" type="panel" text="" background-color="black"></widget>
+                <widget id="right-empty-11-2" type="panel" text="" background-color="black"></widget>
+                <widget id="right-empty-11-3" type="panel" text="" background-color="black"></widget>
+                <widget id="right-empty-11-4" type="panel" text="" background-color="black"></widget>
+            </region>
+            <region id="right-row-13"
+                    orientation="horizontal"
+                    layout="colors-5"
+                    type="panel"
+                    height="*"
+                    gap="1">
+                <widget id="right-empty-12-0" type="panel" text="" background-color="black"></widget>
+                <widget id="right-empty-12-1" type="panel" text="" background-color="black"></widget>
+                <widget id="right-empty-12-2" type="panel" text="" background-color="black"></widget>
+                <widget id="right-empty-12-3" type="panel" text="" background-color="black"></widget>
+                <widget id="right-empty-12-4" type="panel" text="" background-color="black"></widget>
+            </region>
+
+        </region>
+
+    </region>
+
+</screen>
+
+</body>
+</html>

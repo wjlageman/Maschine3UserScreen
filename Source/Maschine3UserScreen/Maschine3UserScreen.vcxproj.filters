@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\Sciter">
+      <UniqueIdentifier>{edf87721-4e38-4da0-bf92-07ca581d0d99}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Maschine3UserScreen.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BannerDemo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GraphicHelpers.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="include\Sciter\sciter-main.cpp">
+      <Filter>Header Files\Sciter</Filter>
+    </ClCompile>
+    <ClCompile Include="SciterSession.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Udp_osc_transport.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SciterTemplate.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Menu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SciterWindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Maschine3ControlsRouter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Maschine3UserScreen.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BannerDemo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GraphicHelpers.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Sciter\aux-asset.h">
+      <Filter>Header Files\Sciter</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Sciter\aux-cvt.h">
+      <Filter>Header Files\Sciter</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Sciter\aux-platform.h">
+      <Filter>Header Files\Sciter</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Sciter\aux-slice.h">
+      <Filter>Header Files\Sciter</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Sciter\nullptr.hpp">
+      <Filter>Header Files\Sciter</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Sciter\sciter-om.h">
+      <Filter>Header Files\Sciter</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Sciter\sciter-om-def.h">
+      <Filter>Header Files\Sciter</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Sciter\sciter-version.h">
+      <Filter>Header Files\Sciter</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Sciter\sciter-x.h">
+      <Filter>Header Files\Sciter</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Sciter\sciter-x-api.h">
+      <Filter>Header Files\Sciter</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Sciter\sciter-x-behavior.h">
+      <Filter>Header Files\Sciter</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Sciter\sciter-x-debug.h">
+      <Filter>Header Files\Sciter</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Sciter\sciter-x-def.h">
+      <Filter>Header Files\Sciter</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Sciter\sciter-x-dom.h">
+      <Filter>Header Files\Sciter</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Sciter\sciter-x-dom.hpp">
+      <Filter>Header Files\Sciter</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Sciter\sciter-x-graphics.h">
+      <Filter>Header Files\Sciter</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Sciter\sciter-x-graphics.hpp">
+      <Filter>Header Files\Sciter</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Sciter\sciter-x-host-callback.h">
+      <Filter>Header Files\Sciter</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Sciter\sciter-x-key-codes.h">
+      <Filter>Header Files\Sciter</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Sciter\sciter-x-lite.hpp">
+      <Filter>Header Files\Sciter</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Sciter\sciter-x-msg.h">
+      <Filter>Header Files\Sciter</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Sciter\sciter-x-primitives.h">
+      <Filter>Header Files\Sciter</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Sciter\sciter-x-request.h">
+      <Filter>Header Files\Sciter</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Sciter\sciter-x-request.hpp">
+      <Filter>Header Files\Sciter</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Sciter\sciter-x-threads.h">
+      <Filter>Header Files\Sciter</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Sciter\sciter-x-types.h">
+      <Filter>Header Files\Sciter</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Sciter\sciter-x-value.h">
+      <Filter>Header Files\Sciter</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Sciter\sciter-x-video-api.h">
+      <Filter>Header Files\Sciter</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Sciter\sciter-x-vulkan.h">
+      <Filter>Header Files\Sciter</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Sciter\sciter-x-window.hpp">
+      <Filter>Header Files\Sciter</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Sciter\value.h">
+      <Filter>Header Files\Sciter</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Sciter\value.hpp">
+      <Filter>Header Files\Sciter</Filter>
+    </ClInclude>
+    <ClInclude Include="SciterSession.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Udp_osc_transport.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MaschineUsbControls.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Todo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SciterTemplate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Menu.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SciterWindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Maschine3ControlsRouter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

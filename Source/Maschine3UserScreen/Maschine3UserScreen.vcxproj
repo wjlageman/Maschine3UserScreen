@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{2dffa9a5-cb50-4071-854b-f33f8afb5c49}</ProjectGuid>
+    <RootNamespace>Maschine3UserScreen</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>Maschine3UserScreen</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)lib\libusb-1.0.20\include; $(ProjectDir)include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(ProjectDir)lib\libusb-1.0.20\lib\x64</AdditionalLibraryDirectories>
+      <AdditionalDependencies>$(CoreLibraryDependencies);%(AdditionalDependencies); libusb-1.0.lib</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)lib\libusb-1.0.20\include; $(ProjectDir)include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(ProjectDir)lib\libusb-1.0.20\lib\x64</AdditionalLibraryDirectories>
+      <AdditionalDependencies>$(CoreLibraryDependencies);%(AdditionalDependencies); libusb-1.0.lib</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="BannerDemo.cpp" />
+    <ClCompile Include="GraphicHelpers.cpp" />
+    <ClCompile Include="include\Sciter\sciter-main.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Maschine3ControlsRouter.cpp" />
+    <ClCompile Include="Maschine3UserScreen.cpp" />
+    <ClCompile Include="Menu.cpp" />
+    <ClCompile Include="SciterSession.cpp" />
+    <ClCompile Include="SciterTemplate.cpp" />
+    <ClCompile Include="SciterWindow.cpp" />
+    <ClCompile Include="Udp_osc_transport.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="BannerDemo.h" />
+    <ClInclude Include="GraphicHelpers.h" />
+    <ClInclude Include="Maschine3ControlsRouter.h" />
+    <ClInclude Include="Menu.h" />
+    <ClInclude Include="SciterTemplate.h" />
+    <ClInclude Include="SciterWindow.h" />
+    <ClInclude Include="Todo.h" />
+    <ClInclude Include="include\Sciter\aux-asset.h" />
+    <ClInclude Include="include\Sciter\aux-cvt.h" />
+    <ClInclude Include="include\Sciter\aux-platform.h" />
+    <ClInclude Include="include\Sciter\aux-slice.h" />
+    <ClInclude Include="include\Sciter\nullptr.hpp" />
+    <ClInclude Include="include\Sciter\sciter-om-def.h" />
+    <ClInclude Include="include\Sciter\sciter-om.h" />
+    <ClInclude Include="include\Sciter\sciter-version.h" />
+    <ClInclude Include="include\Sciter\sciter-x-api.h" />
+    <ClInclude Include="include\Sciter\sciter-x-behavior.h" />
+    <ClInclude Include="include\Sciter\sciter-x-debug.h" />
+    <ClInclude Include="include\Sciter\sciter-x-def.h" />
+    <ClInclude Include="include\Sciter\sciter-x-dom.h" />
+    <ClInclude Include="include\Sciter\sciter-x-dom.hpp" />
+    <ClInclude Include="include\Sciter\sciter-x-graphics.h" />
+    <ClInclude Include="include\Sciter\sciter-x-graphics.hpp" />
+    <ClInclude Include="include\Sciter\sciter-x-host-callback.h" />
+    <ClInclude Include="include\Sciter\sciter-x-key-codes.h" />
+    <ClInclude Include="include\Sciter\sciter-x-lite.hpp" />
+    <ClInclude Include="include\Sciter\sciter-x-msg.h" />
+    <ClInclude Include="include\Sciter\sciter-x-primitives.h" />
+    <ClInclude Include="include\Sciter\sciter-x-request.h" />
+    <ClInclude Include="include\Sciter\sciter-x-request.hpp" />
+    <ClInclude Include="include\Sciter\sciter-x-threads.h" />
+    <ClInclude Include="include\Sciter\sciter-x-types.h" />
+    <ClInclude Include="include\Sciter\sciter-x-value.h" />
+    <ClInclude Include="include\Sciter\sciter-x-video-api.h" />
+    <ClInclude Include="include\Sciter\sciter-x-vulkan.h" />
+    <ClInclude Include="include\Sciter\sciter-x-window.hpp" />
+    <ClInclude Include="include\Sciter\sciter-x.h" />
+    <ClInclude Include="include\Sciter\value.h" />
+    <ClInclude Include="include\Sciter\value.hpp" />
+    <ClInclude Include="Maschine3UserScreen.h" />
+    <ClInclude Include="MaschineUsbControls.h" />
+    <ClInclude Include="SciterSession.h" />
+    <ClInclude Include="Udp_osc_transport.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MaschineUsbControls\MaschineUsbControls.vcxproj">
+      <Project>{1824e0d6-19be-47f6-84f1-efdb119ce7a2}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

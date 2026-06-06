@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Maschine3Display - Index</title>
+    <link rel="stylesheet" href="base.css">
+
+    <script src="oscManager.js"></script>
+    <script src="oscMessage.js"></script>
+
+    <script src="MaschineColors.js"></script>
+    <script src="Box.js"></script>
+
+    <script src="WidgetUtilities.js"></script>
+    <script src="Label.js"></script>
+    <script src="Widget.js"></script>
+    <script src="WidgetState.js"></script>
+    <script src="PanelWidget.js"></script>
+    <script src="MidiWidget.js"></script>
+    <script src="BangWidget.js"></script>
+    <script src="ButtonWidget.js"></script>
+    <script src="ToggleWidget.js"></script>
+    <script src="MenuWidget.js"></script>
+    <script src="ScrollWidget.js"></script>
+    <script src="RadioButtonWidget.js"></script>
+    <script src="DialWidget.js"></script>
+    <script src="WidgetObjects.js"></script>
+
+    <script src="Utilities.js"></script>
+    <script src="JsonFormatter.js"></script>
+
+    <script src="ScreenCompiler.js"></script>
+    <script src="ScreenLayout.js"></script>
+    <script src="Region.js"></script>
+    <script src="Screen.js"></script>
+    <script src="ScreenManager.js"></script>
+
+    <script src="ControlsManager.js"></script>
+    <script src="main.js"></script>
+</head>
+<body>
+
+<screen id="screen"
+        type="maschine3"
+        template-name="maschine-color-pairs"
+        orientation="vertical"
+        background-color="black"
+        gap="4"
+        border="1"
+        border-color="gray">
+
+    <layouts>
+        <layout id="full-width" orientation="horizontal" widget-count="1"></layout>
+        <layout id="colors-4" orientation="horizontal" widget-count="4" gap="4"></layout>
+    </layouts>
+
+    <region id="header"
+            orientation="horizontal"
+            layout="full-width"
+            type="panel"
+            height="34"
+            background-color="body">
+        <widget id="header-panel" type="panel" text="Maschine color pairs" background-color="body" text-color="chalk" bold="1"></widget>
+    </region>
+
+    <region id="color-pairs"
+            orientation="vertical"
+            height="*"
+            gap="4"
+            background-color="black">
+
+            <region id="color-row-1"
+                    orientation="horizontal"
+                    layout="colors-4"
+                    type="button"
+                    height="*"
+                    gap="4">
+                <widget id="red" type="button" text="red~0x05" background-color="red"></widget>
+                <widget id="redhot" type="button" text="redhot~0x06" background-color="redhot"></widget>
+                <widget id="brown" type="button" text="brown~0x09" background-color="brown"></widget>
+                <widget id="orange" type="button" text="orange~0x0A" background-color="orange"></widget>
+            </region>
+            <region id="color-row-2"
+                    orientation="horizontal"
+                    layout="colors-4"
+                    type="button"
+                    height="*"
+                    gap="4">
+                <widget id="tomato" type="button" text="tomato~0x0D" background-color="tomato"></widget>
+                <widget id="coral" type="button" text="coral~0x0E" background-color="coral"></widget>
+                <widget id="gold" type="button" text="gold~0x11" background-color="gold"></widget>
+                <widget id="khaki" type="button" text="khaki~0x12" background-color="khaki"></widget>
+            </region>
+            <region id="color-row-3"
+                    orientation="horizontal"
+                    layout="colors-4"
+                    type="button"
+                    height="*"
+                    gap="4">
+                <widget id="oloive" type="button" text="olive~0x15" background-color="olive"></widget>
+                <widget id="sun" type="button" text="sun~0x16" background-color="sun"></widget>
+                <widget id="spring" type="button" text="spring~0x19" background-color="spring"></widget>
+                <widget id="lime" type="button" text="lime~0x1A" background-color="lime"></widget>
+            </region>
+            <region id="color-row-4"
+                    orientation="horizontal"
+                    layout="colors-4"
+                    type="button"
+                    height="*"
+                    gap="4">
+                <widget id="green" type="button" text="green~0x1D" background-color="green"></widget>
+                <widget id="forestgreen" type="button" text="forestgreen~0x1E" background-color="forestgreen"></widget>
+                <widget id="emerald" type="button" text="emerald~0x21" background-color="emerald"></widget>
+                <widget id="limegreen" type="button" text="limegreen~0x22" background-color="limegreen"></widget>
+            </region>
+            <region id="color-row-5"
+                    orientation="horizontal"
+                    layout="colors-4"
+                    type="button"
+                    height="*"
+                    gap="4">
+                <widget id="pine" type="button" text="pine~0x25" background-color="pine"></widget>
+                <widget id="granny" type="button" text="granny~0x26" background-color="granny"></widget>
+                <widget id="teal" type="button" text="teal~0x29" background-color="teal"></widget>
+                <widget id="cyan" type="button" text="cyan~0x2A" background-color="cyan"></widget>
+            </region>
+            <region id="color-row-6"
+                    orientation="horizontal"
+                    layout="colors-4"
+                    type="button"
+                    height="*"
+                    gap="4">
+                <widget id="lilac" type="button" text="lilac~0x2D" background-color="lilac"></widget>
+                <widget id="turquoise" type="button" text="turquoise~0x2E" background-color="turquoise"></widget>
+                <widget id="blue" type="button" text="blue~0x31" background-color="blue"></widget>
+                <widget id="navy" type="button" text="navy~0x32" background-color="navy"></widget>
+            </region>
+            <region id="color-row-7"
+                    orientation="horizontal"
+                    layout="colors-4"
+                    type="button"
+                    height="*"
+                    gap="4">
+                <widget id="indigo" type="button" text="indigo~0x35" background-color="indigo"></widget>
+                <widget id="violet" type="button" text="violet~0x36" background-color="violet"></widget>
+                <widget id="orchid" type="button" text="orchid~0x39" background-color="orchid"></widget>
+                <widget id="purple" type="button" text="purple~0x3A" background-color="purple"></widget>
+            </region>
+            <region id="color-row-8"
+                    orientation="horizontal"
+                    layout="colors-4"
+                    type="button"
+                    height="*"
+                    gap="4">
+                <widget id="toy" type="button" text="toy~0x3D" background-color="toy"></widget>
+                <widget id="rose" type="button" text="rose~0x3E" background-color="rose"></widget>
+                <widget id="pink" type="button" text="pink~0x41" background-color="pink"></widget>
+                <widget id="hotpink" type="button" text="hotpink~0x42" background-color="hotpink"></widget>
+            </region>
+
+    </region>
+
+    <region id="status"
+            orientation="horizontal"
+            layout="full-width"
+            type="panel"
+            height="28"
+            background-color="body">
+        <widget id="status-panel" type="panel" text="Base color and partner color are shown next to each other" background-color="body" text-color="chalk"></widget>
+    </region>
+
+</screen>
+
+</body>
+</html>

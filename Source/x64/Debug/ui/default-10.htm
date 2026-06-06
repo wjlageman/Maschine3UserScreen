@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Maschine3 User Screen - Default</title>
+</head>
+<body>
+
+<screen id="screen"
+        type="maschine3"
+        template-name="default"
+        orientation="vertical"
+        background-color="black"
+        gap="1"
+        border="0"
+        border-color="gray">
+
+    <layouts>
+        <layout id="full-width" orientation="horizontal" widget-count="1"></layout>
+        <layout id="controls-10" orientation="horizontal" widget-count="10" gap="1"></layout>
+    </layouts>
+
+    <region id="title-bar"
+            orientation="horizontal"
+            layout="full-width"
+            type="panel"
+            height="26"
+            background-color="body"
+            border="1"
+            border-color="gray">
+        <widget id="title"
+                type="panel"
+                text="Maschine MK3 Default User Screen with a Menu and a Scroll"
+                align="left"
+                valign="middle"
+                font-size="18"
+                bold="1"
+                text-color="chalk"
+                background-color="body"></widget>
+    </region>
+
+    <region id="top-buttons"
+            orientation="horizontal"
+            layout="controls-10"
+            type="bang"
+            height="32"
+            gap="1"
+            border="1"
+            border-color="gray"
+            background-color="black">
+        <widget id="button-1" type="bang" text="Top 1" background-color="body" text-color="chalk" border-color="gray"></widget>
+        <widget id="button-2" type="bang" text="Top 2" background-color="body" text-color="chalk" border-color="gray"></widget>
+        <widget id="button-3" type="bang" text="Top 3" background-color="body" text-color="chalk" border-color="gray"></widget>
+        <widget id="button-4" type="bang" text="Top 4" background-color="body" text-color="chalk" border-color="gray"></widget>
+        <widget id="button-5" type="bang" text="Top 5" background-color="body" text-color="chalk" border-color="gray"></widget>
+        <widget id="button-6" type="bang" text="Top 6" background-color="body" text-color="chalk" border-color="gray"></widget>
+        <widget id="button-7" type="bang" text="Top 7" background-color="body" text-color="chalk" border-color="gray"></widget>
+        <widget id="button-8" type="bang" text="Top 8" background-color="body" text-color="chalk" border-color="gray"></widget>
+        <widget id="plug-in" type="menu" back="channel" width="*.*" text="Main" value="0" items="Main|Mixer|Sampling|Tracks|Groups|Sounds|Sends|EQ|Compressor|Limiter|Reverb|Delay|Utility" background-color="teal" text-color="white" border-color="gray"></widget>
+    </region>
+
+    <region id="dials"
+            orientation="horizontal"
+            layout="controls-10"
+            type="dial"
+            height="104"
+            gap="1"
+            border="1"
+            border-color="gray"
+            background-color="black">
+        <widget id="dial-1" type="dial" text="Dial 1" value="0" min="0" max="127" background-color="slategray" text-color="chalk" border-color="gray" font-size="12"></widget>
+        <widget id="dial-2" type="dial" text="Dial 2" value="0" min="0" max="127" background-color="slategray" text-color="chalk" border-color="gray" font-size="12"></widget>
+        <widget id="dial-3" type="dial" text="Dial 3" value="0" min="0" max="127" background-color="slategray" text-color="chalk" border-color="gray" font-size="12"></widget>
+        <widget id="dial-4" type="dial" text="Dial 4" value="0" min="0" max="127" background-color="slategray" text-color="chalk" border-color="gray" font-size="12"></widget>
+        <widget id="dial-5" type="dial" text="Dial 5" value="0" min="0" max="127" background-color="slategray" text-color="chalk" border-color="gray" font-size="12"></widget>
+        <widget id="dial-6" type="dial" text="Dial 6" value="0" min="0" max="127" background-color="slategray" text-color="chalk" border-color="gray" font-size="12"></widget>
+        <widget id="dial-7" type="dial" text="Dial 7" value="0" min="0" max="127" background-color="slategray" text-color="chalk" border-color="gray" font-size="12"></widget>
+        <widget id="dial-8" type="dial" text="Dial 8" value="0" min="0" max="127" background-color="slategray" text-color="chalk" border-color="gray" font-size="12"></widget>
+        <widget id="joy-step" type="scroll" control="joy-step" width="*.*" background-color="gray" value="2" font-size="12" valign="center" back="joy-left" next="joy-right" 
+            items="ape|antelope|armadillo|bear|civet|cat|deer|emu|elephant|fox|gerbil|goldfish|hippo|ibis|inchworm|jaguar|kangaroo|lizard|monkey|nightingale|okapi|ostrich|peacock|quail|rabbit|snake|tiger|unicorn|umbrella bird|vole|walrus|ox|butterfly|yak|zebra">
+</widget>
+    </region>
+
+    <region id="select-buttons"
+            orientation="horizontal"
+            layout="controls-10"
+            type="bang"
+            height="32"
+            gap="1"
+            border="1"
+            border-color="gray"
+            background-color="black">
+        <widget id="select-1" type="bang" text="Select 1" background-color="body" text-color="chalk" border-color="gray"></widget>
+        <widget id="select-2" type="bang" text="Select 2" background-color="body" text-color="chalk" border-color="gray"></widget>
+        <widget id="select-3" type="bang" text="Select 3" background-color="body" text-color="chalk" border-color="gray"></widget>
+        <widget id="select-4" type="bang" text="Select 4" background-color="body" text-color="chalk" border-color="gray"></widget>
+        <widget id="select-5" type="bang" text="Select 5" background-color="body" text-color="chalk" border-color="gray"></widget>
+        <widget id="select-6" type="bang" text="Select 6" background-color="body" text-color="chalk" border-color="gray"></widget>
+        <widget id="select-7" type="bang" text="Select 7" background-color="body" text-color="chalk" border-color="gray"></widget>
+        <widget id="select-8" type="bang" text="Select 8" background-color="body" text-color="chalk" border-color="gray"></widget>
+        <widget id="joy-left" type="bang" text="Joy &lt;" background-color="black" text-color="chalk" border-color="gray"></widget>
+        <widget id="joy-right" type="bang" text="Joy &gt;" background-color="black" text-color="chalk" border-color="gray"></widget>
+    </region>
+
+    <region id="transport"
+            orientation="horizontal"
+            layout="controls-10"
+            type="bang"
+            height="40"
+            gap="1"
+            border="1"
+            border-color="gray"
+            background-color="black"
+            bold="1">
+        <widget id="arrow-left" type="bang" text="&lt;" background-color="navy" text-color="white" border-color="gray" font-size="24"></widget>
+        <widget id="play" type="bang" text="Play" background-color="green" text-color="white" border-color="gray"></widget>
+        <widget id="rec" type="bang" text="Rec" background-color="red" text-color="white" border-color="gray"></widget>
+        <widget id="stop" type="bang" text="Stop" background-color="gray" text-color="white" border-color="gray"></widget>
+        <widget id="restart" type="bang" text="Restart" background-color="indigo" text-color="white" border-color="gray"></widget>
+        <widget id="erase" type="bang" text="Erase" background-color="brown" text-color="white" border-color="gray"></widget>
+        <widget id="select" type="bang" text="Select" background-color="teal" text-color="white" border-color="gray"></widget>
+        <widget id="arrow-right" type="bang" text="&gt;" background-color="navy" text-color="white" border-color="gray" font-size="24"></widget>
+        <widget id="mute" type="bang" text="Mute" background-color="gray" text-color="white" border-color="gray"></widget>
+        <widget id="solo" type="bang" text="Solo" background-color="gold" text-color="black" border-color="gray"></widget>
+    </region>
+
+    <region id="status"
+            orientation="horizontal"
+            layout="full-width"
+            type="panel"
+            height="30"
+            background-color="body"
+            border="1"
+            border-color="gray">
+        <widget id="status-bar"
+                type="panel"
+                text="Ready"
+                align="left"
+                valign="middle"
+                font-size="14"
+                text-color="chalk"
+                background-color="body"></widget>
+    </region>
+
+</screen>
+
+</body>
+</html>
